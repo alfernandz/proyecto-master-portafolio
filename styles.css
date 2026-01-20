@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 70px;
+
+}
+:root {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #6B7280;
+    --color-titles: black;
+    --space-large: 2rem;
+    --color-border: #e0e0e0; 
+    --fs-sm: clamp(0.8rem, 0.18vi + 0.75rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.38vi + 0.91rem, 1.19rem);
+
+}
+body {
+    font-size: var(--fs-base);
+}
+.header-horizontal {
+    display: flex; /* Activa el modo flexible */
+    justify-content: space-between; /* Empuja el logo a la izq y el menú a la der */
+    align-items: center; /* Centra verticalmente los elementos */
+    position: sticky;
+    top: 0;
+    width: 100%; /* Opcional: para que ocupe todo el ancho */
+    z-index: 100; /* Opcional: para asegurar que esté encima de otros elementos */
+    background-color: rgba(255, 255, 255, 0.84);
+    padding: 10px 20px; /* Espacio interno alrededor */
+    border: 0.75px solid #e0e0e0;
+    border-right: none;
+    margin: 0px;
+    /*background-color: #333; /* Color de fondo */
+    /*color: white;*/
+}
+.logo-title {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo {
+    width: 6%;
+    height: 6%;
+}
+#title {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-titles);
+}
+
+nav ul {
+    display:flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 30px;
+    padding-right: 10px;
+}
+.menu a{
+    text-decoration: none;
+    color: #6B7280;
+    text-align: center;
+    white-space: nowrap;
+}
+.menu a:hover {
+    color:#111827;
+}
+
+.hero-section{
+  display: grid; /* Activamos CSS Grid */
+    /* Definimos 2 columnas que se ajustan automáticamente a su contenido */
+    grid-template-columns: 1fr 1fr;
+    /* Definimos el espacio entre elementos (filas y columnas) */
+    gap: 50px;
+    /* Centramos toda la composición horizontalmente en la pantalla */
+    align-items: center;
+    padding-top: 50px;
+    /* Opcional: para asegurar que no sea demasiado ancho en pantallas gigantes */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero-picture img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+h1{
+    color: var(--color-titles);
+    margin-bottom: 0.5rem;
+    font-size: 2.5em;
+}
+#profesion{
+    font-size: 1.5rem;
+    color: #6B7280;
+}
+h2{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--color-titles);
+}
+.descripcion{
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+.contenedor-botones{
+    display: flex;
+    gap:20px;
+}
+.boton1, .boton2{
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 12px; /* Bordes redondeados suaves */
+    transition: all 0.3s ease; /* Animación suave al pasar el ratón */
+    display: inline-block;
+    text-align: center;
+}
+.boton1 a{
+    text-decoration: none;
+    
+}
+.boton2 a{
+    text-decoration: none;
+    
+}
+
+.boton1 {
+    background-color: #05070a; 
+    border: 2px solid #05070a;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+.boton2 {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+#proyectos {
+    margin-top:2rem;
+    
+    background-color:#F5F6F7;
+    padding-top: 5rem;
+    padding-bottom:2rem;
+}
+#proyectos h2{
+    color: var(--color-titles);
+    margin-bottom:1rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#proyectos p{
+    display:flex;
+    justify-content: center;
+   
+}
+.caja-proyectos{
+    margin: var(--space-large);
+    padding: 20px 0 20px 0;
+    border: 2px  solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.proyectos{
+    
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 calc(50% - 20px);
+    
+}
+.caja-proyectos img {
+    width: 100%;    /* Fuerza a la imagen a ocupar el 100% del ancho del padre */
+    display: block; /* Elimina el espacio extra que HTML añade debajo de las imágenes */
+    height:fit-content;   /* Mantiene la proporción original de la foto */
+}
+.caja-proyectos h3, 
+.caja-proyectos p, 
+.caja-proyectos  {
+    padding-left: 20px;   /* Espacio izquierdo */
+    padding-right: 20px;  /* Espacio derecho igual al izquierdo */
+}
+.caja-proyectos p {
+    line-height: 1.5;
+    
+}
+.caja-proyectos h3{
+    color: black;
+    margin: 20px 0 20px 0;
+}
+.botones-alineacion{
+    display:flex;
+    justify-content: center;
+}
+.boton-proyecto{
+   
+    margin:20px 10px 20px 10px;
+    padding: 6px 8px 6px 8px;
+    color: var(--color-titles);
+    background-color: #ebeff7;
+    border-radius:10px;
+    font-family: 'Inter', sans-serif;
+   
+
+}
+
+
+.about-container {
+    display: grid; /* Activamos CSS Grid */
+    /* Definimos 2 columnas que se ajustan automáticamente a su contenido */
+    grid-template-columns: 1fr 1fr;
+    /* Definimos el espacio entre elementos (filas y columnas) */
+    gap: 50px;
+    /* Centramos toda la composición horizontalmente en la pantalla */
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    margin-top:40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.marco-imagen {
+    width: 100%;       /* Ocupa el ancho de la columna del Grid */
+    height: 650px;     /* AQUÍ defines el tamaño fijo que quieres que se vea */
+    overflow: hidden;  /* CORTA todo lo que sobresalga de esos 400px */
+    border-radius: 15px;
+    align-items:center;
+    justify-content: center; /* Opcional: para mantener tus bordes redondeados */
+}
+.marco-imagen img {
+    width: 100%;       /* Al ser mayor al 100%, la imagen se "amplía" */
+    height: 100%;      /* Mantiene la proporción */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+#about p{
+    line-height: 2;
+    text-align: left;
+    margin-bottom: 1em;
+}
+.tecnologias-titulo{
+    color: var(--color-titles);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+#about button {
+    margin:0 10px 0 10px;
+    padding: 15px;
+    border-radius:10px;
+    color: var(--color-titles);
+    background-color: #ebeff7; 
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    border:none;
+}
+#contacto {
+    padding-top: 80px;
+    background-color:#F5F6F7;
+    border-bottom: 1px solid var(--color-border);
+}
+.contact-header{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.contact-header h2 {
+    margin-bottom: 1rem;
+}
+form {
+    padding: 0 3rem 3rem 3rem;
+}
+form fieldset {
+    padding:3rem;
+    border-radius:10px;
+    border: 0.75px solid #e0e0e0;
+    background-color: white;
+    display: grid;
+    /* Creamos 2 columnas de igual tamaño */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    grid-template-rows: auto auto auto; /* Espacio entre los elementos */
+    max-width: 800px;
+    margin: 0 auto;
+}
+.texto-form {
+    grid-column: span 2;
+}
+
+.datos-form, .texto-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-form label, .texto-form label {
+  margin-bottom: 10px;
+  color: var(--color-titles);
+  font-weight: bold;
+}
+
+.texto-form button {
+    margin: 25px 0 0 0;
+    padding: 12px 16px 12px 16px;
+    border-radius:10px;
+    background-color: var(--color-titles);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+#nombre, #email, #mensaje {
+    padding: 12px 16px 12px 16px;
+    border: 0.66px solid #e0e0e0;
+    background-color: #F5F6F7;
+    font-size: 1rem
+}
+#mensaje {
+    width: 100%;       /* Asegura que ocupe todo el ancho del span 2 */
+    height: 200px;     /* Modifica este valor para aumentar la altura a tu gusto */
+    padding: 12px;
+    border-radius: 8px;
+    resize: vertical;  /* Permite que el usuario lo agrande, pero solo hacia abajo */
+    vertical-align: top;
+}
+.linea-horizontal {
+    border:0 0 2px 0;
+    padding: 10px 0 10px 0;
+}
+
+.divisor {
+    grid-column: span 2;
+    border: 0;
+    border-top: 0.66px solid var(--color-border); /* Grosor y color */
+    margin-top: 5px;           /* Espacio con el botón */
+    width: 100%;                /* Ancho de la línea */
+}
+.contacto-autor{
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+   
+}
+.datos-autor{
+    display: flex;
+    align-items: center;
+}
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer a{
+    text-decoration: none;
+    color: #6B7280;
+
+}
+footer a:hover {
+    color: #494e59;        /* Cambia a un color de énfasis (azul) */
+    transform: translateY(-3px); /* El enlace "salta" 3 píxeles hacia arriba */
+    display: inline-block;  
+}
+
+.enlace {
+    display: flex;
+    gap:20px;
+}
+
+@media (max-width: 1200px){
+    .menu {
+        width:100%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    nav ul li {
+        margin-left: 20px;
+
+    }
+
+    .hero-section, .about-container, #proyectos, .caja-proyectos {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+@media (max-width: 900px){ /*tamaño optimizado para tablets */
+    h1 { font-size: 2rem; }
+    .hero-section, .about-container { gap: 20px; }
+    
+    
+    form fieldset {
+        grid-template-columns: 1fr;
+    }
+    .texto-form, .divisor, .contacto-autor {
+        grid-column: span 1;
+    }
+}
+
+
+@media (max-width: 768px){
+    .menu ul li a {
+        white-space: nowrap; 
+    }
+    nav ul {
+        gap: 10px; /* Reducimos el espacio de 20px a 10px */
+        justify-content: center;
+        flex-wrap: nowrap; /* Obligamos a que no salte de fila el contenedor */
+    }
+    .menu a {
+        font-size: 0.9rem;
+    }
+   
+    .hero-section, .about-container, .caja-proyectos {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Centramos la imagen de presentación y la hacemos más grande */
+    .hero-picture img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Centramos los botones */
+    .contenedor-botones {
+        justify-content: center;
+    }
+
+    /* Reordenamos la sección 'About' para que la foto salga arriba del texto */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .marco-imagen {
+        height: 350px; /* Reducimos altura de la imagen en móvil */
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .marco-imagen img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center calc(25%);
+      
+    }
+    
+    #about p {
+        text-align: center;
+    }
+}
+
+
+@media (max-width:575px){
+    body{
+        font-size: var(--fs-sm);
+    }
+    .header-horizontal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Centra los bloques hijos horizontalmente */
+        text-align: center;
+        gap: 15px;
+    }
+    .logo-title {
+        flex-direction: column; /* Pone el logo encima del texto */
+        justify-content: center;
+        /* Espacio antes del menú */
+        width: 100%;
+    }
+    #logo {
+        width:80px;
+        height: 80px;
+    }
+    #title{
+        display: none;
+    }
+
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Los botones de la sección principal ocupan todo el ancho */
+    .contenedor-botones {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .boton1, .boton2 {
+        width: 100%;
+    }
+
+    /* Ajuste de los proyectos para que no se vean gigantes */
+    .proyectos img {
+        height: auto;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+

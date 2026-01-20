@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content ="Portafolio de Alejandro Fernández, estudiante de programación | Full Stack Developer">
+    <meta name="author" content="Alejandro Fernández García">
+    <meta name="keywords" content="Portafolio, programación, Java, Full Stack Developer, aplicación móvil, backend, frontend">
+    <title>AFG Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo_portfolio.png">
+
+</head>
+<body>
+    <header class="header-horizontal">
+        <div class="logo-title">
+        <img src="logo_portfolio.png" id="logo" alt="Logo del portfolio">
+        <h3 id="title">Portafolio de Alejandro Fernández</h3>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="hero-section">
+            <div class="texto-presentacion"><p>Hola, soy</p>
+            <h1>Alejandro Fernández</h1>
+            <h2 id="profesion">Desarrollador de Software</h2>
+
+            <p class="descripcion">Transformo ideas en aplicaciones móviles y software funcional y atractivo. Estoy especializado en Java, Python y JavaScript.
+            </p>
+            <div class="contenedor-botones">
+            <a href="#proyectos"><p class="boton1">Ver proyectos</p></a>
+            <a href="#contacto"><p class="boton2">Contactar</p></a></div></div>
+            <div class="hero-picture"><img src="imagen_hero_section.png" alt="Imagen de presentación">
+            </div>
+            </div>
+        </section>
+        <section id="proyectos">
+            <h2>Mis proyectos</h2>
+            <p>Algunos de los trabajos que he desarrollado</p>
+            <div class="caja-proyectos">
+            <article class="proyectos">
+                <a href="https://www.linkedin.com/in/alejandrofernandev/" target="_blank"><img src="imagen_bienestar_ahorro.png" alt="Homepage del proyecto 1"></a>
+                <h3>Bienestar Ahorro</h3>
+                <p>Web de divulgación desarrollada con la más alta accesibilidad y seguridad en cuanto a desarrollo web. Frontend avanzado.</p>
+                <div class="botones-alineacion"><p class="boton-proyecto">HTML</p><p class="boton-proyecto">CSS</p><p class="boton-proyecto">JavaScript</p></div>
+                
+            </article>
+            <article class="proyectos">
+                <a href="https://github.com/alfernandz" target="_blank"><img src="imagen_fluvia.png" alt="Homepage del proyecto 2"></a>
+                <h3>Fluvia</h3>
+                <p>App del neobanco Fluvia diseñada con las funciones tradicionales. Altos estándares de ciberseguridad y stack multiplafatorma.</p>
+                <div class="botones-alineacion"><p class="boton-proyecto">Java</p><p class="boton-proyecto">Node.js</p><p class="boton-proyecto">PostgreSQL</p></div>
+            </article>
+            <article class="proyectos">
+                <a href="https://stackoverflow.com/questions" target="_blank"><img src="nomorebusy_imagen.png" alt="Homepage del proyecto 3"></a>
+                <h3>NoMoreBusy</h3>
+                <p>Aplicación para organizar tareas con funcionalidad drag & drop y datos en tiempo real. Uso de APIs.</p>
+                <div class="botones-alineacion"><p class="boton-proyecto">React</p><p class="boton-proyecto">Tailwind</p><p class="boton-proyecto">LocalStorage API</p></div>
+            </article>
+            <article class="proyectos">
+                <a href="https://www.prometeo-fp.com/" target="_blank"></a><img src="ecommerce-imagen.png" alt="Homepage del proyecto 4">
+                <h3>Vértice Running</h3>
+                <p>Plataforma e-commerce robusta con procesos asíncronos y un despliegue ágil y escalable.</p>
+                <div class="botones-alineacion"><p class="boton-proyecto">Python</p><p class="boton-proyecto"">Django</p><p class="boton-proyecto">Docker</p></div>
+            </article>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about-container">
+            <div class="marco-imagen">
+            <img src="about_imagen.png" alt="fotografía del autor de la web">
+            </div>
+            <div class ="about-texto">
+            <h2>Sobre mí</h2>
+            <p>Soy un estudiante apasionado por la programación web. La arquitectura backend y las tecnologías que ayudan a construir aplicaciones con bases de datos sólidas son mis principales intereses. En este sentido, mi enfoque se centra en escribir código limpio y mantenible.</p>
+
+            <p>Actualmente estoy ampliando mis conocimientos en patrones de diseño, APIs y formas de automatización. Me encanta resolver problemas complejos y transformarlos en soluciones simples e intuitivas.</p>
+
+            <p>Cuando no estoy programando, disfruto explorando nuevas herramientas, contribuyendo a proyectos de código abierto y aprendiendo las últimas novedades en ciencia de datos.</p>
+            <p class="tecnologias-titulo">Tecnologías que uso</p>
+            <button>Java</button>
+            <button>Spring Boot</button>
+            <button>Kotlin</button>
+            <button>Python</button>
+            </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <div class="contact-header">
+            <h2>Contacta conmigo</h2>
+            <p>¿Tienes algún proyecto en mente?¡Hablemos!</p>
+            </div>
+            <form>
+                <fieldset>
+                    <div class="datos-form">
+                    <label for="Nombre">Nombre </label><input type="text" id="nombre" placeholder="Tu nombre" required></div>
+                    <div class="datos-form"><label for="email">Tu correo electrónico</label><input type="text" id="email" placeholder="tu@email.com">
+                    </div>
+                    <div class="texto-form">
+                    <label for="mensaje">Mensaje</label><textarea id="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto"></textarea>
+                    <button>Enviar mensaje</button>
+                </div>
+               <hr class="divisor">
+               <div class="contacto-autor">
+                <p class="datos-autor">afernandz@protonmail.com</p><p class="datos-autor">Valencia, España</p>
+               </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Alejandro Fernández. Todos los derechos reservados.</p>
+        <div class="enlace">
+        <a href="https://github.com/alfernandz" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/alejandrofernandev/" target="_blank">LinkedIn</a><a href="https://x.com/afernandzgarcia" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
