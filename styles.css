@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /*importo la fuente que voy a usar en la web*/
 
+
+/*características generales*/
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +27,9 @@ html {
 body {
     font-size: var(--fs-base);
 }
+
+/*edición de la cabecera:logo, título y menú*/
+
 .header-horizontal {
     display: flex; 
     justify-content: space-between; 
@@ -74,6 +79,8 @@ nav ul {
 .menu a:hover {
     color:#111827;
 }
+
+/*edición de la Hero Section*/
 
 .hero-section{
     display: grid; 
@@ -146,6 +153,8 @@ h2{
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
 }
+
+/*edición del apartado dedicado a Proyectos*/
 
 #proyectos {
     margin-top:2rem;
@@ -231,6 +240,8 @@ h2{
 
 }
 
+/*edición de la sección 'Sobre mí'*/
+
 .about-container {
     display: grid; 
     grid-template-columns: 1fr 1fr;
@@ -282,6 +293,8 @@ h2{
     font-size: 1rem;
     border:none;
 }
+
+/*edición de la sección Contacto*/
 
 #contacto {
     padding-top: 80px;
@@ -393,6 +406,7 @@ form fieldset {
     align-items: center;
 }
 
+/*edición del footer*/
 footer{
     padding: 20px;
     display: flex;
@@ -415,6 +429,8 @@ footer a:hover {
     display: flex;
     gap:20px;
 }
+
+/*configuración de las características responsive de la web*/
 
 @media (max-width: 1200px){
     .menu {
